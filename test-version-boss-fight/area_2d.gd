@@ -15,6 +15,7 @@ func _on_body_entered(body):
 	print(body)
 	if body.is_in_group("p2g-g"):
 		healingtarget = body
+		print("wow")
 		
 
 		#body.health += 1
