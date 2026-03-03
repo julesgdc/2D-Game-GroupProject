@@ -4,6 +4,8 @@
 [ext_resource type="Texture2D" uid="uid://dev6is1x50iok" path="res://Free/Main Characters/Ninja Frog/Idle (32x32).png" id="1_onrkg"]
 [ext_resource type="PackedScene" uid="uid://bkibdh1ulolql" path="res://bullet_2_point_0.tscn" id="2_hqtel"]
 [ext_resource type="Texture2D" uid="uid://tbtrasfwgae" path="res://Free/Main Characters/Ninja Frog/Run (32x32).png" id="2_i3pqv"]
+[ext_resource type="Script" uid="uid://ccghsh4fb4kyf" path="res://area_2d.gd" id="5_1jxqw"]
+[ext_resource type="Texture2D" uid="uid://bcr02440sxxr2" path="res://Free/Other/outline-aesthetic-circle-frame-with-star-border-graphic-design-modern-minimal-round-shape-simple-cute-decorative-y2k-geometric-template-png.png" id="5_sweqy"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_hqtel"]
 atlas = ExtResource("1_onrkg")
@@ -186,6 +188,9 @@ radius = 6.0
 font_size = 12
 font_color = Color(0.8315883, 0.98579746, 1, 1)
 
+[sub_resource type="CircleShape2D" id="CircleShape2D_2hs0m"]
+radius = 48.0
+
 [node name="Player" type="CharacterBody2D" unique_id=2024112352]
 z_index = 1
 collision_layer = 2
@@ -205,9 +210,26 @@ shape = SubResource("CircleShape2D_2wuci")
 position = Vector2(12, 4)
 
 [node name="health_label" type="Label" parent="." unique_id=389835549]
-offset_left = -11.0
+offset_left = -6.0
 offset_top = -24.0
-offset_right = 16.0
+offset_right = 21.0
 offset_bottom = -6.0
 text = "10"
 label_settings = SubResource("LabelSettings_hqtel")
+
+[node name="P1_heal" type="Area2D" parent="." unique_id=655341542]
+collision_layer = 10
+collision_mask = 11
+script = ExtResource("5_1jxqw")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="P1_heal" unique_id=743886421]
+position = Vector2(1, 4)
+shape = SubResource("CircleShape2D_2hs0m")
+
+[node name="Sprite2D" type="Sprite2D" parent="P1_heal/CollisionShape2D2" unique_id=2045932622]
+position = Vector2(0.5000017, 2.9724696)
+scale = Vector2(0.3027523, 0.3027522)
+texture = ExtResource("5_sweqy")
+
+[connection signal="body_entered" from="P1_heal" to="P1_heal" method="_on_body_entered"]
+[connection signal="body_exited" from="P1_heal" to="P1_heal" method="_on_body_exited"]

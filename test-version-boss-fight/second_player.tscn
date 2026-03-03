@@ -11,8 +11,9 @@ radius = 7.0
 font_size = 12
 font_color = Color(0.46914876, 1, 0.4600178, 1)
 
-[node name="SecondPlayer" type="CharacterBody2D" unique_id=2136149429]
-collision_layer = 2
+[node name="SecondPlayer" type="CharacterBody2D" unique_id=2136149429 groups=["p2g", "p2g-g"]]
+collision_layer = 10
+collision_mask = 9
 script = ExtResource("1_2uiq3")
 bullet_scene = ExtResource("2_5gusw")
 
