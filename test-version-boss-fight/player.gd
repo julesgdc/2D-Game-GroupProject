@@ -1,6 +1,6 @@
 extends CharacterBody2D
 
-var health = 10
+var health = 99
 var facing = Vector2.RIGHT
 const SPEED = 100.0
 # const JUMP_VELOCITY = -400.0

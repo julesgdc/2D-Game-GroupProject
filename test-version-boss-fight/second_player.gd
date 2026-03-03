@@ -1,13 +1,16 @@
 extends CharacterBody2D
 
-var health = 10
+var health = 99
 var facing = Vector2.RIGHT
 const SPEED = 100.0
+@onready var P2_Heals = false
+@onready var P1_In_Range = false
 # const JUMP_VELOCITY = -400.0
 
 @export var bullet_scene: PackedScene
 @onready var bulletspawn = $bulletspawn2
 @onready var healthbar = $Label
+@onready var heal_box = $P1_heal
 
 
 

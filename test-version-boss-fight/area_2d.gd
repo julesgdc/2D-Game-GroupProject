@@ -1,9 +1,9 @@
 extends Area2D
 
-@onready var player = $Player
+#@onready var player = $Player
 #@export var second_player: PackedScene
-@onready var P1_Heals = false
-@onready var P2_In_Range = false
+#@onready var P1_Heals = false
+#@onready var P2_In_Range = false
 #@onready var p2_instance = second_player.instantiate()
 
 var healingtarget = null
@@ -15,23 +15,14 @@ func _on_body_entered(body):
 	print(body)
 	if body.is_in_group("p2g-g"):
 		healingtarget = body
-		print("wow")
+		#print("wow")
 		
-
-		#body.health += 1
-	#if body.is_in_group("p2g-g"):
-	#	P2_In_Range = true
-	#else:
-	#	P2_In_Range = false
 
 func _process(float):
 	#print(p2_instance.health)
 	#print(P2_In_Range)
-	if Input.is_action_pressed("P1_heal_key") and healingtarget:
+	if Input.is_action_pressed("P1_heal_key") and healingtarget and healingtarget.health < 99:
 		healingtarget.health += 1
-	#print(P1_Heals)
-	#if P1_Heals == true and P2_In_Range == true:
-	#	heal_activate()
 	
 
 	

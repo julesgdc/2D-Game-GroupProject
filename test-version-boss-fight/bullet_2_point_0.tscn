@@ -3,18 +3,18 @@
 [ext_resource type="Script" uid="uid://did2nrlqflc0i" path="res://bullet_2_point_0.gd" id="1_1r15l"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ph0ft"]
-size = Vector2(20, 9)
+size = Vector2(9, 9)
 
 [node name="bullet2point0" type="Area2D" unique_id=686231902]
 collision_mask = 2
 script = ExtResource("1_1r15l")
 
 [node name="ColorRect" type="ColorRect" parent="." unique_id=737179906]
-offset_right = 20.0
+offset_right = 9.0
 offset_bottom = 9.0
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=637454910]
-position = Vector2(10, 4.5)
+position = Vector2(4.5, 4.5)
 shape = SubResource("RectangleShape2D_ph0ft")
 
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]

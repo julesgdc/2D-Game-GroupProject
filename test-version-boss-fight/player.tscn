@@ -191,9 +191,10 @@ font_color = Color(0.8315883, 0.98579746, 1, 1)
 [sub_resource type="CircleShape2D" id="CircleShape2D_2hs0m"]
 radius = 48.0
 
-[node name="Player" type="CharacterBody2D" unique_id=2024112352]
+[node name="Player" type="CharacterBody2D" unique_id=2024112352 groups=["p1g-g"]]
 z_index = 1
 collision_layer = 2
+collision_mask = 11
 script = ExtResource("1_i3pqv")
 bullet_scene_2 = ExtResource("2_hqtel")
 

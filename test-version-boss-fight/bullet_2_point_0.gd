@@ -6,7 +6,7 @@ var shooter: Node2D
 
 func _physics_process(delta):
 	position += direction * speed * delta
-
+	
 
 
 # func _process(delta):
@@ -20,7 +20,7 @@ func _physics_process(delta):
 
 func _on_body_entered(body):
 	if body != shooter and body is not TileMapLayer:
-		body.health -= 1
+		body.health -= 15
 		print(body.health)
 		queue_free()
 	if body is TileMapLayer:
