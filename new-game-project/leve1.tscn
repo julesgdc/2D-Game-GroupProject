@@ -1,0 +1,12 @@
+[gd_scene format=3 uid="uid://ds7vyywju8alu"]
+
+[ext_resource type="Texture2D" uid="uid://4q335xxs2p" path="res://icon.svg" id="1_wvbpe"]
+
+[node name="\\" type="Node2D" unique_id=2054797640]
+
+[node name="Icon" type="Sprite2D" parent="." unique_id=1219294530]
+position = Vector2(-70198, -58576)
+scale = Vector2(543.00006, 711.0001)
+texture = ExtResource("1_wvbpe")
+
+[node name="Sprite2D" type="Sprite2D" parent="Icon" unique_id=2059838869]

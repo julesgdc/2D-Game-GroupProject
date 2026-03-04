@@ -1,0 +1,10 @@
+[gd_scene format=3 uid="uid://bpqiqblqucofu"]
+
+[ext_resource type="Texture2D" uid="uid://csri16qntff7x" path="res://alien .jpg" id="1_t8nbc"]
+[ext_resource type="Script" uid="uid://cawm3k08fqalv" path="res://player.gd" id="2_q333d"]
+
+[node name="Main" type="Node2D" unique_id=894447774]
+
+[node name="Player" type="Sprite2D" parent="." unique_id=620135530]
+texture = ExtResource("1_t8nbc")
+script = ExtResource("2_q333d")

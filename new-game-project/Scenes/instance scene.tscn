@@ -1,0 +1,32 @@
+[gd_scene format=3 uid="uid://c2v0o3y0dkcrs"]
+
+[ext_resource type="Texture2D" uid="uid://04m4jlj3b0rn" path="res://Pictures/istockphoto-829309362-612x612.jpg" id="1_i6qrq"]
+[ext_resource type="Texture2D" uid="uid://ouk6uxdn2xk3" path="res://Pictures/pngtree-alien-on-transparent-background-png-image_15747984.png" id="2_40ve2"]
+[ext_resource type="Texture2D" uid="uid://ca2kitkq10xsv" path="res://Pictures/pngtree-space-shuttle-png-image_5640589.jpg" id="3_v46q5"]
+
+[node name="Alien" type="Node2D" unique_id=2057180303]
+
+[node name="Space background" type="Sprite2D" parent="." unique_id=1102021271]
+position = Vector2(296, -14.000002)
+scale = Vector2(4.140523, 4.360245)
+texture = ExtResource("1_i6qrq")
+
+[node name="Alien" type="Sprite2D" parent="." unique_id=1228612296]
+position = Vector2(71, 579)
+scale = Vector2(0.85, 1.0281249)
+texture = ExtResource("2_40ve2")
+
+[node name="Alien2" type="Sprite2D" parent="." unique_id=1163096600]
+position = Vector2(1187, 650)
+scale = Vector2(0.63125, 0.6375)
+texture = ExtResource("2_40ve2")
+
+[node name="Alien3" type="Sprite2D" parent="." unique_id=268076993]
+position = Vector2(646, 438.00003)
+scale = Vector2(0.696875, 1.4687501)
+texture = ExtResource("2_40ve2")
+
+[node name="Alien4" type="Sprite2D" parent="." unique_id=443104788]
+position = Vector2(401, -689)
+scale = Vector2(0.26666668, 0.285)
+texture = ExtResource("3_v46q5")
