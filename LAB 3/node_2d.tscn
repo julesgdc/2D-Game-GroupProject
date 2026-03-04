@@ -2,6 +2,7 @@
 
 [ext_resource type="Texture2D" uid="uid://dm0oiy1cnxlb7" path="res://icon.svg" id="1_wtcfe"]
 [ext_resource type="PackedScene" uid="uid://coeagtrvpogui" path="res://healthbar.tscn" id="2_0e48y"]
+[ext_resource type="PackedScene" uid="uid://hrquqnr028vr" path="res://coin.tscn" id="3_epypp"]
 
 [sub_resource type="GDScript" id="GDScript_0e48y"]
 script/source = "extends CharacterBody2D
@@ -27,22 +28,31 @@ func _physics_process(_delta):
 #Written by Colin
 "
 
-[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_epypp"]
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_epypp"]
+size = Vector2(121, 120)
 
 [node name="Player" type="Node2D" unique_id=20267722]
 
 [node name="CharacterBody2D" type="CharacterBody2D" parent="." unique_id=1528144269]
-position = Vector2(107, 555)
+position = Vector2(293, 355)
 script = SubResource("GDScript_0e48y")
 
 [node name="Sprite2D" type="Sprite2D" parent="CharacterBody2D" unique_id=1107534616]
+position = Vector2(-95, -355)
 texture = ExtResource("1_wtcfe")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="CharacterBody2D" unique_id=369268041]
-shape = SubResource("WorldBoundaryShape2D_epypp")
+position = Vector2(-97, -356)
+shape = SubResource("RectangleShape2D_epypp")
 
 [node name="Healthbar" parent="." unique_id=1020170254 instance=ExtResource("2_0e48y")]
-offset_left = 33.0
-offset_top = 430.0
-offset_right = 632.99994
-offset_bottom = 440.0
+offset_left = 24.0
+offset_top = 101.0
+offset_right = 623.99994
+offset_bottom = 111.0
+
+[node name="Area2D" parent="." unique_id=2042142007 instance=ExtResource("3_epypp")]
+position = Vector2(14, 95)
+
+[node name="Area2D2" parent="." unique_id=959264079 instance=ExtResource("3_epypp")]
+position = Vector2(276, 103)
