@@ -10,6 +10,7 @@ const SPEED = 100.0
 @onready var bulletspawn = $bulletspawn
 @onready var animated_sprite = $AnimatedSprite2D
 @onready var healthbar = $health_label
+@onready var heal_box = $P1_heal
 
 func fire():
 	var new_bullet = bullet_scene_2.instantiate()
@@ -24,6 +25,8 @@ func _process(float):
 	if Input.is_action_just_pressed("p1_fire"):
 		fire()
 	healthbar.text = str(health)
+#	if P1_heal.P1_In_Range == true:
+#		print("true")
 
 func _physics_process(delta):
 	# Add the gravity.

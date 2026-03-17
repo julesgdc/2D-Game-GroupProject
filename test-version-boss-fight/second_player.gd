@@ -10,6 +10,7 @@ const SPEED = 100.0
 @onready var healthbar = $Label
 
 
+
 func fire():
 	var bullet = bullet_scene.instantiate()
 	bullet.direction = facing
