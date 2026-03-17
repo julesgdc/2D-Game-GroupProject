@@ -1,0 +1,10 @@
+[gd_scene format=3 uid="uid://ddcfo8ls3cgfx"]
+
+[ext_resource type="Texture2D" uid="uid://b2gj424cbgygv" path="res://alien .jpg" id="1_0xm2m"]
+[ext_resource type="Script" uid="uid://dl8spu44lba12" path="res://alien.gd" id="1_ig7tw"]
+
+[node name="Main" type="Node2D" unique_id=643916727]
+
+[node name="Alien" type="Sprite2D" parent="." unique_id=1501440553]
+texture = ExtResource("1_0xm2m")
+script = ExtResource("1_ig7tw")
